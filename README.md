@@ -42,5 +42,32 @@ VALUES
     (9, 'Product 9', 'Description 9', 14.75),
     (10, 'Product 10', 'Description 10', 30.00);
    
-
 ```
+## Project Details
+
+The application is configured with the following settings:
+
+- Server context path: `/spring-boot-virtual-threads`
+- Server port: `your_port_number`
+- Application name: `spring-boot-virtual-threads`
+- Database driver class name: `com.mysql.cj.jdbc.Driver`
+- Database URL: `jdbc:mysql://localhost:your_port_number/your_db_name`
+- Database username: `your-username`
+- Database password: `your-password`
+- Hibernate show SQL: `true`
+- Hibernate dialect: `org.hibernate.dialect.MySQLDialect`
+- Virtual threads enabled: `true`
+
+## Project Loom and Virtual Threads
+
+The application uses Project Loom's virtual threads feature. Project Loom is an ongoing project in the OpenJDK community with the goal of making it easier to write, debug, profile, and maintain concurrent applications meeting today's requirements.
+
+Project Loom introduces the concept of "virtual threads" that are managed by the Java Virtual Machine (JVM) rather than the operating system. Virtual threads, also known as "fibers", are lightweight and are meant to make concurrent programming more accessible to developers by making it as straightforward as writing sequential code.
+
+## Running the Application
+
+To run the application, use the following command:
+
+```bash
+mvn spring-boot:run
+
