@@ -5,17 +5,17 @@ In Java, a thread is a lightweight sub-process, the smallest unit of processing.
 ## Types of Threads
 
 ### Platform Threads
-Platform threads are managed by the operating system. They are heavyweight, consuming more resources and having a higher context-switching cost. The `java.lang.Thread` class in Java represents a platform thread.
+- Platform threads are managed by the operating system. They are heavyweight, consuming more resources and having a higher context-switching cost. The `java.lang.Thread` class in Java represents a platform thread.
 
 ### Virtual Threads
-Virtual threads are managed by the runtime or a library, not by the operating system. They are lightweight, consuming fewer resources and having a lower context-switching cost. Virtual threads can be mapped to a smaller set of platform threads, allowing a large number of virtual threads to be run concurrently. Virtual threads are a part of Project Loom in Java, which is not yet part of any official Java release as of JDK 17.
+- Virtual threads are managed by the runtime or a library, not by the operating system. They are lightweight, consuming fewer resources and having a lower context-switching cost. Virtual threads can be mapped to a smaller set of platform threads, allowing a large number of virtual threads to be run concurrently. Virtual threads are a part of Project Loom in Java, which is not yet part of any official Java release as of JDK 17.
 
-- Method - GET
+### Method - GET
 ```
 curl --location 'http://localhost:8080/api/v1/products'
 ```
 
-- SQL SCRIPT
+### SQL SCRIPT
 
 ```sql
 create database virtual_db; 
