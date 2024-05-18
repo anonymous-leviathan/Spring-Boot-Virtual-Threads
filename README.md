@@ -58,11 +58,15 @@ The application is configured with the following settings:
 - Hibernate dialect: `org.hibernate.dialect.MySQLDialect`
 - Virtual threads enabled: `true`
 
-## Project Loom and Virtual Threads
+## Project Loom
 
-- The application uses Project Loom's virtual threads feature. Project Loom is an ongoing project in the OpenJDK community with the goal of making it easier to write, debug, profile, and maintain concurrent applications meeting today's requirements.
+Project Loom is an ongoing project in the OpenJDK community with the goal of making it easier to write, debug, profile, and maintain concurrent applications meeting today's requirements.  Project Loom introduces the concept of "virtual threads" that are managed by the Java Virtual Machine (JVM) rather than the operating system. Virtual threads, also known as "fibers", are lightweight and are meant to make concurrent programming more accessible to developers by making it as straightforward as writing sequential code.  Key features of Project Loom include:  
+- Virtual Threads: Unlike traditional OS threads, virtual threads are lightweight and cheap to create. You can have millions of virtual threads in a single JVM, which would not be possible with OS threads due to resource limitations.  
+- Simplified Concurrency: With virtual threads, developers can write concurrent applications using a simple, straightforward programming model. You can use the same Thread API to create and manage virtual threads, and you don't have to deal with callbacks or complex synchronization primitives.  
+- Efficient Blocking: Virtual threads are designed to block efficiently. When a virtual thread is blocked (for example, waiting for data from a network or a database), it doesn't consume any OS thread resources. This makes it possible to have a large number of concurrently blocking virtual threads.  
+- Improved Debugging and Monitoring: Project Loom aims to provide better tools for debugging and monitoring concurrent applications. With virtual threads, stack traces are cleaner and easier to understand, and monitoring tools can provide more useful information about the state of your application.  
 
-- Project Loom introduces the concept of "virtual threads" that are managed by the Java Virtual Machine (JVM) rather than the operating system. Virtual threads, also known as "fibers", are lightweight and are meant to make concurrent programming more accessible to developers by making it as straightforward as writing sequential code.
+Please note that as of now, Project Loom is still in the experimental stage and is not yet included in any official Java release.
 
 ## Running the Application
 
