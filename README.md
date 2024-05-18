@@ -60,9 +60,9 @@ The application is configured with the following settings:
 
 ## Project Loom and Virtual Threads
 
-The application uses Project Loom's virtual threads feature. Project Loom is an ongoing project in the OpenJDK community with the goal of making it easier to write, debug, profile, and maintain concurrent applications meeting today's requirements.
+- The application uses Project Loom's virtual threads feature. Project Loom is an ongoing project in the OpenJDK community with the goal of making it easier to write, debug, profile, and maintain concurrent applications meeting today's requirements.
 
-Project Loom introduces the concept of "virtual threads" that are managed by the Java Virtual Machine (JVM) rather than the operating system. Virtual threads, also known as "fibers", are lightweight and are meant to make concurrent programming more accessible to developers by making it as straightforward as writing sequential code.
+- Project Loom introduces the concept of "virtual threads" that are managed by the Java Virtual Machine (JVM) rather than the operating system. Virtual threads, also known as "fibers", are lightweight and are meant to make concurrent programming more accessible to developers by making it as straightforward as writing sequential code.
 
 ## Running the Application
 
