@@ -12,7 +12,7 @@ In Java, a thread is a lightweight sub-process, the smallest unit of processing.
 
 ### Method - GET
 ```
-curl --location 'http://localhost:8080/api/v1/products'
+curl --location 'http://localhost:8080/spring-boot-virtual-threads/api/v1/products'
 ```
 
 ### SQL SCRIPT
